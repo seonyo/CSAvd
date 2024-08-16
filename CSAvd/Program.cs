@@ -21,6 +21,15 @@ namespace CSAvd
     {
 
     }
+
+    class SquateCalculator
+    {
+        public int this[int i]
+        {
+            get { return i * i; }
+            set { Console.WriteLine("{i}번째 상품 설정", i); }
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -32,6 +41,13 @@ namespace CSAvd
             Console.WriteLine(wantedString.Value);
             Console.WriteLine(wantedInt.Value);
             Console.WriteLine(wantedDouble.Value);
+
+
+            SquateCalculator sc = new SquateCalculator();
+            Console.WriteLine(sc[10]);
+            Console.WriteLine(sc[11]);
+            Console.WriteLine(sc[40]);
+            sc[3] = 4;
         }
     }
 }
