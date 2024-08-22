@@ -34,6 +34,33 @@ namespace CSAvd
 
     internal class Program
     {
+
+        struct Point
+        {
+            public int x;
+            public int y;
+            public string testA;
+            public string testB;
+
+            // 구조체 -> 기본생성자 사용X
+            // 구조체 생성자 -> 변수가 모두 초기화 되어야 함!
+
+            public Point(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
+                testA = null;
+                testB = "init";
+            }
+            public Point(int x, int y, string test)
+            {
+                this.x = x;
+                this.y = y;
+                testA = null;
+                testB = test;
+            }
+        }
+
         static void NextPosition(int x, int y, int vx, int vy,
             out int rx, out int ry)
         {
